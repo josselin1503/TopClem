@@ -1,0 +1,40 @@
+#############################
+### Commands sample addin ###
+#############################
+
+This sample shows the basic Command usage on TopSolid.
+
+> How to create a UI project?
+> What is a TopSolid Command?
+> How the TopSolid commands are working?
+
+
+
+
+1. UI project
+
+	The UI project has a specific organisation:
+		- A ContextMenu.cs file (to define where the Addin menu will be displayed)
+		- A ContextMenu.Item.ico file (Icon of the Addin)
+		- A ContextMenu.xml file (to define the Addin menu organisation)
+		- A Resources.cs file (for the translations)
+		- A Session.cs file (to execute code at TopSolid start and close)
+
+
+2. Command definition
+
+	A Command is a derivated class on an addin.
+	It is located on the UI part of the Addin (in general on a Command folder or in a folder with the Command function).
+
+	A command contains several files:
+		- C# Command file with the Command methods (see the §3 for more information)
+		- Resources file with the Command translations (1 per language)
+		- [Optional] Icon file with the same name of the Command (it is the Command icon used on the TopSolid GUI)
+		
+
+3. Command works
+
+	In a Command, you have to override the base command methods or properties.
+	
+	The CanInvoke property returns a boolean to define if the Command is active or not. This code is often evaluated so it shall run quickly (avoid huge researchs).
+	The Invoke method defines the Execution method when the Command is invoked.

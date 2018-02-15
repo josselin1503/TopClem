@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Add a new tab menu-->
+<ContextMenuItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Icon="Item" Text="$Name" Resource="Services.Marceau.UI.ContextMenu">
+  <!--Add commands to the tab menu (down arrow on the right of the menu)-->
+  <MenuStripItems>
+    <MenuItem xsi:type="CommandMenuItem">Services.Marceau.UI.BasicMenu.BasicMenuCommand</MenuItem>
+  </MenuStripItems>
+  <!--Add commands to the tab menu icons-->
+  <ToolStripItems>
+    <MenuItem xsi:type="CommandMenuItem">Services.Marceau.UI.BasicMenu.BasicMenuCommand</MenuItem>
+  </ToolStripItems>
+</ContextMenuItem>
+
+
+
+
+

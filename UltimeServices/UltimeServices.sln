@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Marceau.AddIn", "AddIn\Services.Marceau.AddIn.csproj", "{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Marceau.UI", "UI\Services.Marceau.UI.csproj", "{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{8210ADFA-64F4-470D-9471-4FA4A52F3E99}"
+	ProjectSection(SolutionItems) = preProject
+		About.txt = About.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Debug|Any CPU.Build.0 = Debug|x64
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Debug|x86.ActiveCfg = Debug|x86
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Debug|x86.Build.0 = Debug|x86
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Release|Any CPU.ActiveCfg = Release|x64
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Release|Any CPU.Build.0 = Release|x64
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Release|x86.ActiveCfg = Release|x86
+		{B1E57C6C-A2CA-4670-A65E-D5B408FEE657}.Release|x86.Build.0 = Release|x86
+		{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}.Debug|Any CPU.Build.0 = Debug|x64
+		{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}.Debug|x86.ActiveCfg = Debug|x86
+		{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}.Debug|x86.Build.0 = Debug|x86
+		{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}.Release|Any CPU.ActiveCfg = Release|x64
+		{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}.Release|Any CPU.Build.0 = Release|x64
+		{FFFFA816-5D09-484A-9D11-F6CFB6C72E6E}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.7.17:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = AddIn\\TopSolid.ApiSamples.Kernel.Commands.AddIn.csproj
+		SccProjectName0 = AddIn
+		SccLocalPath0 = AddIn
+		SccProjectUniqueName1 = UI\\TopSolid.ApiSamples.Kernel.Commands.UI.csproj
+		SccProjectName1 = UI
+		SccLocalPath1 = UI
+		SccLocalPath2 = .
+	EndGlobalSection
+EndGlobal
