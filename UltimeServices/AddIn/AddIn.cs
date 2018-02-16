@@ -2,8 +2,14 @@
 using System.Globalization;
 using System.Resources;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using TK = TopSolid.Kernel;
-
+using System.Linq;
+using System.Threading.Tasks;
+using System.Threading;
+using System.Drawing;
+using System.Collections.Generic;
+using System.IO;
 
 namespace Services.Marceau.AddIn
 {
@@ -72,9 +78,54 @@ namespace Services.Marceau.AddIn
         /// </summary>
         public override void StartSession()
         {
-             TK.SX.SessionManager.Start(typeof(Services.Marceau.UI.Session));
+            Control.CheckForIllegalCrossThreadCalls = false;
+
+            this.splash = Application.OpenForms.OfType<Form>().FirstOrDefault();
+            if (this.splash != null)
+            {
+                Label label = new Label();
+                label.Text = "Top'Clem\r\nPirate Edition";
+                label.Font = new Font("Arial", 72, FontStyle.Bold);
+                label.ForeColor = Color.Red;
+                label.BackColor = Color.Transparent;
+                label.Size = this.splash.Size;
+                label.TextAlign = ContentAlignment.MiddleCenter;
+                this.splash.Controls.Add(label);
+
+                Task.Factory.StartNew(moveSplash);
+
+            }
+
+
+            TK.SX.SessionManager.Start(typeof(Services.Marceau.UI.Session));
         }
-        
+
+        private void moveSplash()
+        {
+            while ((this.splash != null && this.splash.Visible))
+            {
+                try
+                {
+                    this.splash.Left += random.Next(-50, 51);
+                    this.splash.Top += random.Next(-50, 51);
+
+                    Application.DoEvents();
+                }
+                catch (Exception ex)
+                {
+
+                }
+
+                Thread.Sleep(20);
+            }
+
+                this.clemForms.ForEach(f => f.Close());
+            
+        }
+
+        private Form splash;
+        private Random random = new Random();
+
 
         /// <summary>
         /// Overrides <see cref="TK.TX.AddIns.AddIn.EndSession"/>.
