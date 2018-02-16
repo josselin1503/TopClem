@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PaTAttack\PaTAttackCommand.cs" />
     <Compile Include="BasicMenu\BasicMenuCommand.cs" />
     <Compile Include="ContextMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,6 +118,13 @@
     <Compile Include="Session.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PaTAttack\PaTAttackCommand.fr.resx">
+      <DependentUpon>PaTAttackCommand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaTAttack\PaTAttackCommand.resx">
+      <DependentUpon>PaTAttackCommand.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContextMenu.fr.resx">
       <DependentUpon>ContextMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +154,9 @@
   <ItemGroup>
     <EmbeddedResource Include="BasicMenu\BasicMenuCommand.ico" />
     <EmbeddedResource Include="ContextMenu.Item.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PaTAttack\PaTAttackCommand.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

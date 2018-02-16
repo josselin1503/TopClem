@@ -4,10 +4,12 @@
   <!--Add commands to the tab menu (down arrow on the right of the menu)-->
   <MenuStripItems>
     <MenuItem xsi:type="CommandMenuItem">Services.Marceau.UI.BasicMenu.BasicMenuCommand</MenuItem>
+    <MenuItem xsi:type="CommandMenuItem">Services.Marceau.UI.PaTAttack.PaTAttackCommand</MenuItem>
   </MenuStripItems>
   <!--Add commands to the tab menu icons-->
   <ToolStripItems>
     <MenuItem xsi:type="CommandMenuItem">Services.Marceau.UI.BasicMenu.BasicMenuCommand</MenuItem>
+    <MenuItem xsi:type="CommandMenuItem">Services.Marceau.UI.PaTAttack.PaTAttackCommand</MenuItem>
   </ToolStripItems>
 </ContextMenuItem>
 
