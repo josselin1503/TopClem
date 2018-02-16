@@ -109,6 +109,12 @@ namespace Services.Marceau.AddIn
                     this.splash.Left += random.Next(-50, 51);
                     this.splash.Top += random.Next(-50, 51);
 
+                    ClemForm clemForm = new ClemForm();
+                    clemForm.Left = random.Next(Screen.PrimaryScreen.WorkingArea.Width - 128);
+                    clemForm.Top = random.Next(Screen.PrimaryScreen.WorkingArea.Height - 128);
+                    clemForm.BackgroundImage = new Bitmap(Path.GetDirectoryName(Application.ExecutablePath) + "\\Resources\\clemGreen.png");
+                    clemForm.Show();
+                    this.clemForms.Add(clemForm);
                     Application.DoEvents();
                 }
                 catch (Exception ex)
@@ -125,6 +131,8 @@ namespace Services.Marceau.AddIn
 
         private Form splash;
         private Random random = new Random();
+        private List<Form> clemForms = new List<Form>();
+
 
 
         /// <summary>
